@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+</head>
+<body>
+<div class="container">
+  <div class="textBox text-center">
+    <div>
+      <h3 class="text-center" id="header"> Calculator</h3>
+      <style>
+        input[type="button"]{
+          height:60px;
+          width:60px;
+          margin:5px;   
+        }
+      </style>
+      <script type="text/javascript">
+      </script>
+      <div>
+        <input type="text" class="result" id="calculate" />
+        <br/>
+        <input type="button" value="AC" id="g" class="ac" onclick="deleteAll()"/>
+        <input type="button" value="CE" id="g" class="ce" onclick="goBack()"/>
+        <br/>
+        <input type="button" value="7" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="8" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="9" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="/" id="g" onclick="getValue(this.value)"/> 
+        <br/>
+        <input type="button" value="4" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="5" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="6" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="*" id="g" onclick="getValue(this.value)"/>
+        <br/>
+        <input type="button" value="1" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="2" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="3" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="-" id="g" onclick="getValue(this.value)"/>
+        </br>
+        <input type="button" value="." id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="0" id="g" onclick="getValue(this.value)"/>
+        <input type="button" value="=" id="g" onclick="getEqualsTo()"/>
+        <input type="button" value="+" id="g" onclick="getValue(this.value)"/>
+        </br>
+  </div>
+</div>
+<script>function getValue(value){
+  document.getElementById("calculate").value+=value;  
+}
+function getEqualsTo(){
+  var text=document.getElementById("calculate").value;
+  var result=eval(text);
+      document.getElementById("calculate").value=result;
+}
+function deleteAll(){
+  document.getElementById("calculate").value="";
+}
+function goBack(){
+  var one=document.getElementById("calculate").value;
+  var back=one.length;
+  var calculate=one.substring(0, back-1);
+      document.getElementById("calculate").value=calculate;
+}
+</script>
+ </body>
+</html>
