@@ -1,0 +1,33 @@
+<body>
+
+<h1>Find the String</h1>
+
+  
+<h4>Input:</h4>
+  <table>
+    <tr>
+      <td>Sentence:</td>
+      <td><input type="text" id="str"></td>
+    </tr>
+    <tr>
+      <td>Ending string:</td>
+      <td><input type="text" id="target"></td>
+    </tr>
+  </table>
+  <p><button onclick="clickButton()">Try it</button></p>
+  <h4>Output: <span id="output"></span></h4>
+<script>function confirmEnding(str, target) {
+  if (str.substring(str.length - target.length) === target){
+    return "Yes, the ending is the same";
+  } else {
+    return "No, that ending does not match";
+  }
+}
+
+function clickButton() {
+    var str = document.getElementById("str").value;
+    var target = document.getElementById("target").value;
+    document.getElementById("output").innerHTML = confirmEnding(str, target);
+}</script>
+
+</body>
