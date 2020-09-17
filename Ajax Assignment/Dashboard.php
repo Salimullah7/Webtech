@@ -50,3 +50,16 @@ function showCustomer(str) {
 </script>
 </body>
 </html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 70px;
+}
+</style>
+<body>
+
+<h2>Please,select district name</h2>
